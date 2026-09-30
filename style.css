@@ -323,7 +323,7 @@ img {
 /* Page Header for Inner Pages */
 .page-header {
     background: linear-gradient(rgba(26, 32, 44, 0.85), rgba(26, 32, 44, 0.85)), 
-                url('/images/Global-Music-Distribution.jpg') no-repeat center center/cover;
+                url('images/hero-background.jpg') no-repeat center center/cover;
     padding: 80px 0;
     text-align: center;
     color: var(--white-color);
