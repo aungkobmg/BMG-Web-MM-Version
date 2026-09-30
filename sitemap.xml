@@ -8,7 +8,7 @@
   <url><loc>https://bmg.com.mm/services/music-video-distribution.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://bmg.com.mm/services/publishing-administration.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://bmg.com.mm/artists/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://bmg.com.mm/artists/project-k.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://bmg.com.mm/artists/artist-profile.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://bmg.com.mm/artists/example-artist.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://bmg.com.mm/artists/example-band.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://bmg.com.mm/resources/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>

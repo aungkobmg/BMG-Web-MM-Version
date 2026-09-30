@@ -7,7 +7,7 @@ Information Architecture, sitemap and naming convention.
 - `/` Home (`index.html`)
 - `/services/` + 5 service pages (music-distribution, youtube-monetization,
   content-id-protection, music-video-distribution, publishing-administration)
-- `/artists/` index + profiles (project-k, example-artist, example-band, artist-profile template via any profile)
+- `/artists/` index + `artist-profile.html` (template, populated with Project K), example-artist.html, example-band.html. Future per-artist URLs like `/artists/project-k.html` follow the same naming rules.
 - `/resources/` index + categories: spotify/, youtube/, copyright/, industry-insights/ with articles
 - `/about/` index, partners.html, careers.html
 - `/contact/` form page
