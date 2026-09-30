@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://bmg.com.mm/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://bmg.com.mm/services/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bmg.com.mm/services/music-distribution.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bmg.com.mm/services/youtube-monetization.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bmg.com.mm/services/content-id-protection.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bmg.com.mm/services/music-video-distribution.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bmg.com.mm/services/publishing-administration.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bmg.com.mm/artists/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bmg.com.mm/artists/project-k.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://bmg.com.mm/artists/example-artist.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://bmg.com.mm/artists/example-band.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://bmg.com.mm/resources/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bmg.com.mm/resources/spotify/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://bmg.com.mm/resources/spotify/how-to-get-spotify-verified.html</loc><lastmod>2026-08-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bmg.com.mm/resources/youtube/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://bmg.com.mm/resources/youtube/how-youtube-content-id-works.html</loc><lastmod>2026-07-30</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bmg.com.mm/resources/copyright/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://bmg.com.mm/resources/copyright/music-copyright-guide-myanmar.html</loc><lastmod>2026-06-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bmg.com.mm/resources/industry-insights/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://bmg.com.mm/resources/industry-insights/future-of-music-streaming.html</loc><lastmod>2026-05-05</lastmod><priority>0.7</priority></url>
+  <url><loc>https://bmg.com.mm/about/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://bmg.com.mm/about/partners.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://bmg.com.mm/about/careers.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://bmg.com.mm/contact/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://bmg.com.mm/sitemap.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+</urlset>

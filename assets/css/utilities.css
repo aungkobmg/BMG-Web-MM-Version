@@ -1,0 +1,70 @@
+/* ============================================================
+   BMG Website V2 - Utilities (utilities.css)
+   Small single-purpose helpers. Keep this file last in the
+   cascade so utilities can override components.
+   ============================================================ */
+
+/* ---------- Spacing ---------- */
+.u-mt-0 { margin-top: 0 !important; }
+.u-mb-0 { margin-bottom: 0 !important; }
+.u-mt-3 { margin-top: var(--bmg-space-3); }
+.u-mt-4 { margin-top: var(--bmg-space-4); }
+.u-mt-5 { margin-top: var(--bmg-space-5); }
+.u-mb-3 { margin-bottom: var(--bmg-space-3); }
+.u-mb-4 { margin-bottom: var(--bmg-space-4); }
+.u-mb-5 { margin-bottom: var(--bmg-space-5); }
+
+.u-py-4 { padding-block: var(--bmg-space-4); }
+.u-py-5 { padding-block: var(--bmg-space-5); }
+
+.u-gap-2 { gap: var(--bmg-space-2); }
+.u-gap-3 { gap: var(--bmg-space-3); }
+
+/* ---------- Text ---------- */
+.u-text-center { text-align: center; }
+.u-text-muted { color: var(--bmg-muted); }
+.u-text-primary { color: var(--bmg-primary); }
+.u-text-white { color: var(--bmg-white); }
+.u-text-sm { font-size: 0.875rem; }
+.u-text-lg { font-size: 1.15rem; }
+.u-fw-bold { font-weight: 700; }
+.u-uppercase { text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* ---------- Flex / layout helpers ---------- */
+.u-flex { display: flex; }
+.u-flex-col { flex-direction: column; }
+.u-items-center { align-items: center; }
+.u-justify-between { justify-content: space-between; }
+.u-wrap { flex-wrap: wrap; }
+.u-full { width: 100%; }
+
+/* ---------- Misc ---------- */
+.u-rounded { border-radius: var(--bmg-radius); }
+.u-rounded-lg { border-radius: var(--bmg-radius-lg); }
+.u-shadow-md { box-shadow: var(--bmg-shadow-md); }
+.u-divider {
+  border: 0;
+  border-top: 1px solid var(--bmg-border);
+  margin-block: var(--bmg-space-4);
+}
+
+/* ---------- Visibility ---------- */
+@media (max-width: 991.98px) {
+  .u-hide-mobile { display: none !important; }
+}
+
+@media (min-width: 992px) {
+  .u-hide-desktop { display: none !important; }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
