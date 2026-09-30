@@ -1,0 +1,390 @@
+/* ============================================================
+   BMG Website V2 - Components (components.css)
+   Reusable UI blocks: cards, buttons, badges, forms, article,
+   artist profile, service detail, CTA band.
+   ============================================================ */
+
+/* ---------- Buttons ---------- */
+.bmg-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: var(--bmg-radius);
+  border: 1px solid transparent;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: background-color var(--bmg-transition),
+              color var(--bmg-transition),
+              box-shadow var(--bmg-transition),
+              transform var(--bmg-transition);
+}
+
+.bmg-btn:active {
+  transform: translateY(1px);
+}
+
+.bmg-btn--primary {
+  background: var(--bmg-primary);
+  color: var(--bmg-white);
+}
+
+.bmg-btn--primary:hover {
+  background: var(--bmg-primary-dark);
+  color: var(--bmg-white);
+  box-shadow: var(--bmg-shadow-md);
+}
+
+.bmg-btn--accent {
+  background: var(--bmg-accent);
+  color: var(--bmg-dark);
+}
+
+.bmg-btn--accent:hover {
+  filter: brightness(0.95);
+}
+
+.bmg-btn--outline {
+  background: transparent;
+  border-color: currentColor;
+  color: var(--bmg-primary);
+}
+
+.bmg-btn--outline:hover {
+  background: rgba(13, 110, 253, 0.08);
+}
+
+.bmg-btn--light {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--bmg-white);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.bmg-btn--light:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--bmg-white);
+}
+
+.bmg-btn--sm {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+/* ---------- Cards ---------- */
+.bmg-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bmg-white);
+  border: 1px solid var(--bmg-border);
+  border-radius: var(--bmg-radius-lg);
+  box-shadow: var(--bmg-shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--bmg-transition), transform var(--bmg-transition);
+}
+
+.bmg-card:hover {
+  box-shadow: var(--bmg-shadow-md);
+  transform: translateY(-3px);
+}
+
+.bmg-card__media {
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #e8eefc, #d7e3fb);
+  display: grid;
+  place-items: center;
+  color: var(--bmg-primary);
+  font-size: 2rem;
+}
+
+.bmg-card__body {
+  padding: var(--bmg-space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--bmg-space-2);
+  flex: 1;
+}
+
+.bmg-card__title {
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.bmg-card__title a {
+  color: inherit;
+}
+
+.bmg-card__title a:hover {
+  color: var(--bmg-primary);
+  text-decoration: none;
+}
+
+.bmg-card__text {
+  color: var(--bmg-muted);
+  font-size: 0.95rem;
+  margin: 0;
+  flex: 1;
+}
+
+.bmg-card__link {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* ---------- Badges ---------- */
+.bmg-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: rgba(13, 110, 253, 0.1);
+  color: var(--bmg-primary-dark);
+}
+
+.bmg-badge--accent {
+  background: rgba(255, 193, 7, 0.18);
+  color: #8a6100;
+}
+
+.bmg-badge--muted {
+  background: var(--bmg-light);
+  color: var(--bmg-muted);
+}
+
+/* ---------- Feature list ---------- */
+.bmg-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--bmg-space-2);
+}
+
+.bmg-feature-list li {
+  position: relative;
+  padding-left: 1.75rem;
+}
+
+.bmg-feature-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(13, 110, 253, 0.12);
+  color: var(--bmg-primary);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+/* ---------- Forms ---------- */
+.bmg-form {
+  display: grid;
+  gap: var(--bmg-space-3);
+}
+
+.bmg-form__group {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.bmg-form__label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.bmg-form__control,
+.bmg-form textarea.bmg-form__control,
+.bmg-form select.bmg-form__control {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--bmg-border);
+  border-radius: var(--bmg-radius);
+  font: inherit;
+  color: var(--bmg-text);
+  background: var(--bmg-white);
+  transition: border-color var(--bmg-transition),
+              box-shadow var(--bmg-transition);
+}
+
+.bmg-form__control:focus {
+  outline: none;
+  border-color: var(--bmg-primary);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.18);
+}
+
+.bmg-form__hint {
+  font-size: 0.8rem;
+  color: var(--bmg-muted);
+}
+
+/* ---------- Stats strip ---------- */
+.bmg-stats {
+  display: grid;
+  gap: var(--bmg-space-3);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .bmg-stats { grid-template-columns: repeat(4, 1fr); }
+}
+
+.bmg-stat__value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--bmg-primary);
+  line-height: 1.1;
+}
+
+.bmg-stat__label {
+  font-size: 0.85rem;
+  color: var(--bmg-muted);
+}
+
+/* ---------- CTA band ---------- */
+.bmg-cta {
+  background: linear-gradient(135deg, var(--bmg-primary), var(--bmg-primary-dark));
+  color: var(--bmg-white);
+  border-radius: var(--bmg-radius-lg);
+  padding: var(--bmg-space-5);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bmg-space-3);
+}
+
+.bmg-cta h2,
+.bmg-cta .h2 {
+  color: var(--bmg-white);
+  margin: 0;
+}
+
+.bmg-cta p {
+  margin: 0.25rem 0 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- Article (resources) ---------- */
+.bmg-article {
+  max-width: 46rem;
+  margin-inline: auto;
+}
+
+.bmg-article__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bmg-space-2);
+  align-items: center;
+  color: var(--bmg-muted);
+  font-size: 0.85rem;
+  margin-bottom: var(--bmg-space-3);
+}
+
+.bmg-article__body {
+  font-size: 1.05rem;
+}
+
+.bmg-article__body h2 {
+  margin-top: var(--bmg-space-5);
+}
+
+.bmg-article__body img {
+  border-radius: var(--bmg-radius);
+  margin-block: var(--bmg-space-3);
+}
+
+.bmg-article__body blockquote {
+  margin: var(--bmg-space-4) 0;
+  padding: var(--bmg-space-3) var(--bmg-space-4);
+  border-left: 4px solid var(--bmg-primary);
+  background: var(--bmg-light);
+  border-radius: 0 var(--bmg-radius) var(--bmg-radius) 0;
+  font-style: italic;
+  color: var(--bmg-text);
+}
+
+/* ---------- Artist profile ---------- */
+.bmg-profile {
+  display: grid;
+  gap: var(--bmg-space-4);
+}
+
+@media (min-width: 768px) {
+  .bmg-profile {
+    grid-template-columns: 280px 1fr;
+    align-items: start;
+  }
+}
+
+.bmg-profile__avatar {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--bmg-radius-lg);
+  background: linear-gradient(135deg, var(--bmg-dark), #26324e);
+  display: grid;
+  place-items: center;
+  color: var(--bmg-white);
+  font-size: 3rem;
+  font-weight: 800;
+  box-shadow: var(--bmg-shadow-md);
+}
+
+.bmg-profile__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bmg-space-2);
+}
+
+/* ---------- Service detail layout ---------- */
+.bmg-service-hero {
+  background: var(--bmg-light);
+  border-bottom: 1px solid var(--bmg-border);
+  padding-block: var(--bmg-space-5);
+}
+
+.bmg-two-col {
+  display: grid;
+  gap: var(--bmg-space-5);
+}
+
+@media (min-width: 992px) {
+  .bmg-two-col {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+}
+
+/* ---------- Table of contents (articles) ---------- */
+.bmg-toc {
+  position: sticky;
+  top: calc(var(--bmg-header-height) + var(--bmg-space-3));
+  background: var(--bmg-white);
+  border: 1px solid var(--bmg-border);
+  border-radius: var(--bmg-radius);
+  padding: var(--bmg-space-3);
+  font-size: 0.9rem;
+}
+
+.bmg-toc__title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--bmg-muted);
+  margin-bottom: var(--bmg-space-2);
+}
+
+.bmg-toc ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.3rem;
+}

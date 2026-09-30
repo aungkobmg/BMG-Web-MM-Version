@@ -1,339 +1,227 @@
 <!DOCTYPE html>
-<html lang="my">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <title>BMG Myanmar | သင့်သီချင်းများကို ကမ္ဘာအနှံ့ဖြန့်ချိပြီး ဝင်ငွေရှာပါ</title>
-    <meta name="description" content="Spotify, Apple Music, YouTube နှင့် TikTok တို့တွင် သင့်သီချင်းများကို ၁၀၀% မူပိုင်ခွင့်ဖြင့် ဖြန့်ချိပြီး ဝင်ငွေရှာလိုက်ပါ။ BMG Myanmar - နံပါတ် ၁ ဂီတဖြန့်ချိရေး မိတ်ဖက်။">
-    <link rel="canonical" href="https://bmg.com.mm/">
-
-    <!-- Open Graph / Facebook Meta -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://bmg.com.mm/">
-    <meta property="og:title" content="BMG Myanmar | သင့်သီချင်းများကို ဝင်ငွေအဖြစ် ပြောင်းလဲလိုက်ပါ">
-    <meta property="og:description" content="Platform ပေါင်း ၁၅၀ ကျော်သို့ သင့်ဂီတကို တိုက်ရိုက်ဖြန့်ချိပါ။ မူပိုင်ခွင့် ၁၀၀% အာမခံပါသည်။">
-    <meta property="og:image" content="https://bmg.com.mm/images/og-image.jpg">
-
-    <link rel="icon" href="images/logo.png" type="image/png">
-    
-    <!-- CSS Links -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMG Myanmar | Music Distribution & Rights Management</title>
+  <meta name="description" content="BMG helps Myanmar artists distribute music, monetize YouTube, protect content with Content ID and administer publishing rights.">
+  <link rel="canonical" href="https://bmg.com.mm/">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bmg.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
 </head>
-
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="index.html" aria-label="BMG Myanmar Home">
-                        <img src="images/logo.png" alt="BMG Myanmar Logo" width="120" height="auto">
-                    </a>
-                </div>
-                <div class="nav-menu" id="nav-menu">
-                    <ul>
-                        <li><a href="index.html" class="nav-link active">ပင်မစာမျက်နှာ</a></li>
-                        <li><a href="our-services.html" class="nav-link">ဝန်ဆောင်မှုများ</a></li>
-                        <li><a href="about.html" class="nav-link">ကျွန်ုပ်တို့အကြောင်း</a></li>
-                        <li><a href="artists.html" class="nav-link">အနုပညာရှင်များ</a></li>
-                        <li><a href="blog.html" class="nav-link">ဘလော့</a></li>
-                        <li><a href="faq.html" class="nav-link">မေးခွန်းများ</a></li>
-                        <li><a href="contact.html" class="nav-link btn-nav-contact">သီချင်းတင်မည်</a></li>
-                    </ul>
-                </div>
-                <button class="hamburger-menu" aria-label="Toggle Navigation" id="nav-toggle"> 
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </nav>
+  <a class="bmg-skip-link" href="#main">Skip to content</a>
+
+  <header class="bmg-header">
+    <div class="bmg-container bmg-header__inner">
+      <a class="bmg-brand" href="index.html">
+        <span class="bmg-brand__mark" aria-hidden="true">BMG</span>
+        <span>BMG Myanmar</span>
+      </a>
+
+      <button class="bmg-nav-toggle u-hide-desktop" type="button"
+              data-nav-toggle aria-expanded="false" aria-controls="site-nav"
+              aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="bmg-nav" id="site-nav" data-nav aria-label="Primary">
+        <ul class="bmg-nav__list">
+          <li><a class="bmg-nav__link" href="index.html">Home</a></li>
+          <li><a class="bmg-nav__link" href="services/">Services</a></li>
+          <li><a class="bmg-nav__link" href="artists/">Artists</a></li>
+          <li><a class="bmg-nav__link" href="resources/">Resources</a></li>
+          <li><a class="bmg-nav__link" href="about/">About</a></li>
+          <li><a class="bmg-nav__link" href="contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="bmg-hero">
+      <div class="bmg-container">
+        <span class="bmg-badge bmg-badge--accent">Myanmar&apos;s Music Partner</span>
+        <h1 class="u-mt-3">Get your music everywhere it deserves to be.</h1>
+        <p class="lead">Distribution, YouTube monetization, Content ID protection and publishing
+          administration — one partner for every stage of your release.</p>
+        <div class="u-flex u-wrap u-gap-2 u-mt-4">
+          <a class="bmg-btn bmg-btn--accent" href="services/">Explore Services</a>
+          <a class="bmg-btn bmg-btn--light" href="contact/">Release With BMG</a>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <!-- High Impact Hero Section -->
-        <section class="hero" id="hero">
-            <div class="hero-bg-overlay"></div>
-            <img src="images/hero-background.jpg" alt="Myanmar Music Distribution Studio" class="hero-bg-img">
-            
-            <div class="container">
-                <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-                    <h1>သီချင်းဖန်တီးဖို့ပဲ အာရုံစိုက်ပါ၊ <br><span class="highlight-text">ကမ္ဘာအနှံ့ဖြန့်ချိဖို့နဲ့မူပိုင်ခွင့်ကာကွယ်ဖို့က</span> <br>BMG ရှိပါတယ်။</h1>
-                    <p>Spotify, Apple Music, YouTube Music, TikTok အပါအဝင် ကမ္ဘာတစ်ဝန်းရှိ သီချင်းဖြန့်ချိမှုကို ဝန်ဆောင်မှုပေးသည့် နေရာပေါင်း ၁၅၀ ကျော်တွင် ကိုယ်တိုင် ကြိုးစားဖန်တီးထားသည့် ဂီတလက်ရာများကို မူပိုင်ခွင့် အပြည့်အဝဖြင့် စနစ်တကျ ဖြန့်ချိ တင်ဆက်ပေးနေပြီး၊ ဖန်တီးထားသည့် လက်ရာများ လေလွင့်ဆုံးရှုံးမှု မရှိစေရန်နှင့် မသမာသူများ ခိုးယူသုံးစွဲခြင်းမှလည်း ထိန်းသိမ်းစောင့်ရှောက် ကာကွယ်ပေးပါသည်။</p>
-                    
-                    <div class="hero-buttons">
-                        <a href="contact.html" class="btn btn-primary btn-lg">ယခုပဲ သီချင်းတင်မည် <i class="fas fa-arrow-right"></i></a>
-                        <a href="tel:+959400046827" class="btn btn-outline-white btn-lg"><i class="fas fa-phone-alt"></i> အခမဲ့ ဆွေးနွေးရန်</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Problem & Solution Section (Pain Points) -->
-        <section class="pain-points-section section-padding bg-light">
-            <div class="container">
-                <div class="section-header text-center" data-aos="fade-up">
-                    <h2>မြန််မာ့ဂီတလောကမှာ ဖန်တီးသူတိုင်း ကြုံတွေ့ရတတ်တဲ့ အခက်အခဲများကို <br><span class="highlight-text"> BMG က ဘယ်လိုဖြေရှင်းနေလဲ။</span></h2>
-                </div>
-
-                <div class="card-grid">
-                    <div class="card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="pain-icon text-error"><i class="fas fa-exclamation-triangle fa-2x"></i></div>
-                        <h3>သီချင်းများ ခိုးယူခံရခြင်း</h3>
-                        <p>အခြားသူများက သင့်သီချင်းကို ခွင့်ပြုချက်မရှိဘဲ YouTube/Facebook ပေါ်တွင် တင်ပြီး ဝင်ငွေရှာနေပါသလား။</p>
-                        <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
-                        <p class="text-success"><strong>BMG Solution:</strong> Content ID ဖြင့် ကာကွယ်ပေးပြီး ထိုဝင်ငွေများကို သင့်ထံ ရောက်ရှိအောင် အလိုအလျောက် ပြန်လည်တောင်းဆိုပေးပါသည်။</p>
-                    </div>
-
-                    <div class="card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="pain-icon text-error"><i class="fas fa-file-invoice-dollar fa-2x"></i></div>
-                        <h3>ဝင်ငွေ ထုတ်ယူရ ခက်ခဲခြင်း</h3>
-                        <p>ပြည်ပ Platform များမှ ရရှိသော Royalty ဝင်ငွေများကို မြန်မာနိုင်ငံသို့ ထုတ်ယူရန် ခက်ခဲနေပါသလား။</p>
-                        <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
-                        <p class="text-success"><strong>BMG Solution:</strong> လစဉ် အသေးစိတ် စာရင်းဇယားဖြင့် KBZ, KPay မှတစ်ဆင့် မြန်မာကျပ်ငွေဖြင့် တိုက်ရိုက် ပေးချေပါသည်။</p>
-                    </div>
-
-                    <div class="card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="pain-icon text-error"><i class="fas fa-user-slash fa-2x"></i></div>
-                        <h3>Artist Verification မရရှိခြင်း</h3>
-                        <p>Spotify Blue Tick သို့မဟုတ် YouTube Official Artist Channel (OAC) ရရှိရန် အခက်အခဲ ဖြစ်နေပါသလား။</p>
-                        <hr style="margin: 15px 0; border: none; border-top: 1px solid #eee;">
-                        <p class="text-success"><strong>BMG Solution:</strong> တရားဝင် Verified Artist Badge ရရှိအောင် အစမှ အဆုံးထိ ကူညီဆောင်ရွက်ပေးပါသည်။</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Key Features Section -->
-        <section class="our-services section-padding" id="services">
-            <div class="container">
-                <div class="section-header text-center" data-aos="fade-up">
-                    <span class="section-subtitle">Core Features</span>
-                    <h2>သင့်အနုပညာကို အောင်မြင်စေမည့် ဝန်ဆောင်မှုများ</h2>
-                </div>
-
-                <div class="card-grid">
-                    <div class="card service-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-icon-wrapper"><i class="fas fa-globe-americas fa-2x"></i></div>
-                        <h3>Global Distribution</h3>
-                        <p>ကမ္ဘာတစ်ဝှမ်းရှိ Platform ၁၅၀ ကျော်သို့ သင့်သီချင်းများကို တိုင်ပင်ဆွေးနွေး၍ မြန်ဆန်စွာ ဖြန့်ချိပေးသည်။</p>
-                        <a href="our-services.html" class="read-more-link">အသေးစိတ်ကြည့်ရန် <i class="fas fa-chevron-right"></i></a>
-                    </div>
-
-                    <div class="card service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-icon-wrapper"><i class="fab fa-youtube fa-2x"></i></div>
-                        <h3>YouTube Monetization</h3>
-                        <p>YouTube Channel Monetization နှင့် Official Artist Channel (OAC) လျှောက်ထားပေးခြင်း။</p>
-                        <a href="our-services.html" class="read-more-link">အသေးစိတ်ကြည့်ရန် <i class="fas fa-chevron-right"></i></a>
-                    </div>
-
-                    <div class="card service-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-icon-wrapper"><i class="fas fa-shield-alt fa-2x"></i></div>
-                        <h3>Content ID Protection</h3>
-                        <p>သင့်ဂီတ မူပိုင်ခွင့်များကို အလိုအလျောက် ကာကွယ်ပေးပြီး ဝင်ငွေ ပြန်လည်ရှာဖွေပေးခြင်း။</p>
-                        <a href="our-services.html" class="read-more-link">အသေးစိတ်ကြည့်ရန် <i class="fas fa-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- How It Works Section -->
-        <section class="how-it-works section-padding bg-light">
-            <div class="container">
-                <div class="section-header text-center" data-aos="fade-up">
-                    <span class="section-subtitle">Process</span>
-                    <h2>လွယ်ကူသော အဆင့် (၄) ဆင့်ဖြင့် စတင်လိုက်ပါ</h2>
-                </div>
-
-                <div class="steps-grid">
-                    <div class="step-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="step-number">01</div>
-                        <h3>ဆက်သွယ်ပါ</h3>
-                        <p>BMG အဖွဲ့ထံ အွန်လိုင်းမှ သို့မဟုတ် ဖုန်းဖြင့် တိုက်ရိုက် ဆက်သွယ်ပါ။</p>
-                    </div>
-                    <div class="step-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="step-number">02</div>
-                        <h3>သီချင်း ပေးပို့ပါ</h3>
-                        <p>Audio File၊ Artwork နှင့် Song Details များ ပေးပို့ပါ။</p>
-                    </div>
-                    <div class="step-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="step-number">03</div>
-                        <h3>ကမ္ဘာအနှံ့ ဖြန့်ချိပါ</h3>
-                        <p>Spotify, Apple, YouTube စသည့် Platform များပေါ်သို့ ဖြန့်ချိပေးမည်။</p>
-                    </div>
-                    <div class="step-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="step-number">04</div>
-                        <h3>ဝင်ငွေ ထုတ်ယူပါ</h3>
-                        <p>ရရှိလာသော Royalty များကို လစဉ် စာရင်းအတိအကျဖြင့် ထုတ်ယူပါ skin။</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Live Proof & Achievements -->
-        <section class="achievements-section section-padding bg-dark text-white">
-            <div class="container">
-                <div class="section-header text-center" data-aos="fade-up">
-                    <span class="section-subtitle text-white">Our Numbers</span>
-                    <h2>ဂီတလောကတွင် BMG ၏ အောင်မြင်မှု မှတ်တိုင်များ</h2>
-                </div>
-                <div class="achievements-grid">
-                    <div class="achievement-item" data-aos="zoom-in" data-aos-delay="100">
-                        <span class="achievement-number">1,500+</span>
-                        <p>လက်တွဲထားသူ Artists & Writers</p>
-                    </div>
-                    <div class="achievement-item" data-aos="zoom-in" data-aos-delay="200">
-                        <span class="achievement-number">18,000+</span>
-                        <p>ဖြန့်ချိပြီးသော သီချင်းပေါင်း</p>
-                    </div>
-                    <div class="achievement-item" data-aos="zoom-in" data-aos-delay="300">
-                        <span class="achievement-number">200+</span>
-                        <p>ရောက်ရှိထားသော နိုင်ငံများ</p>
-                    </div>
-                    <div class="achievement-item" data-aos="zoom-in" data-aos-delay="400">
-                        <span class="achievement-number">384M+</span>
-                        <p>စုစုပေါင်း Total Streams</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Artists -->
-        <section class="our-artists section-padding" id="artists">
-            <div class="container">
-                <div class="section-header text-center" data-aos="fade-up">
-                    <span class="section-subtitle">Artists Family</span>
-                    <h2>BMG မိသားစုဝင် အနုပညာရှင်များ</h2>
-                </div>
-                <div class="artist-preview-grid">
-                    <div class="artist-thumb" data-aos="fade-up">
-                        <img src="images/artist-1.jpg" alt="BMG Artist" loading="lazy">
-                        <div class="artist-name">Artist Name 1</div>
-                    </div>
-                    <div class="artist-thumb" data-aos="fade-up" data-aos-delay="100">
-                        <img src="images/artist-2.jpg" alt="BMG Artist" loading="lazy">
-                        <div class="artist-name">Artist Name 2</div>
-                    </div>
-                    <div class="artist-thumb" data-aos="fade-up" data-aos-delay="200">
-                        <img src="images/artist-3.jpg" alt="BMG Artist" loading="lazy">
-                        <div class="artist-name">Artist Name 3</div>
-                    </div>
-                    <div class="artist-thumb" data-aos="fade-up" data-aos-delay="300">
-                        <img src="images/artist-4.jpg" alt="BMG Artist" loading="lazy">
-                        <div class="artist-name">Artist Name 4</div>
-                    </div>
-                </div>
-                <div class="text-center mt-40" data-aos="fade-up">
-                    <a href="artists.html" class="btn btn-secondary">အနုပညာရှင်အားလုံးကို ကြည့်ရန်</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- High Conversion Contact Form Section -->
-        <section id="contact" class="contact-section section-padding bg-light">
-            <div class="container">
-                <div class="section-header text-center" data-aos="fade-up">
-                    <span class="section-subtitle">Start Now</span>
-                    <h2>သင့်သီချင်းများကို ယခုပဲ စတင်ဖြန့်ချိလိုက်ပါ</h2>
-                    <p>အချက်အလက်များကို ဖြည့်စွက်ပေးပါ၊ ကျွန်ုပ်တို့အဖွဲ့မှ ၁ နာရီအတွင်း ပြန်လည်ဆက်သွယ်ပါမည်။</p>
-                </div>
-
-                <div class="contact-wrapper">
-                    <div class="contact-info-box" data-aos="fade-right">
-                        <h3>တိုက်ရိုက်ဆက်သွယ်ရန်</h3>
-                        <div class="info-row">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>No.79/81, Central Tower, အနော်ရထာလမ်း၊ ကျောက်တံတား၊ ရန်ကုန်။</p>
-                        </div>
-                        <div class="info-row">
-                            <i class="fas fa-phone-alt"></i>
-                            <p><a href="tel:+959400046827">09-400046827</a>, <a href="tel:+959400046826">09-400046826</a></p>
-                        </div>
-                        <div class="info-row">
-                            <i class="fas fa-envelope"></i>
-                            <p><a href="mailto:contact@bmg.com.mm">contact@bmg.com.mm</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-box" data-aos="fade-left">
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="သင့်အမည်" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" id="phone" name="phone" placeholder="ဖုန်းနံပါတ်" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="အီးမေးလ်" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" name="message" rows="3" placeholder="သီချင်းအကြောင်း သို့မဟုတ် သိလိုသည်များ ရေးပါ" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary full-width">အခမဲ့ ဆွေးနွေးခွင့် လျှောက်ထားမည်</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="images/logo-white.png" alt="BMG Myanmar Logo White" class="footer-logo" loading="lazy">
-                    <p>BMG Myanmar (Billionaire Minds Group) သည် မြန်မာအနုပညာရှင်များ၏ သီချင်းများကို ကမ္ဘာ့အဆင့်မီ Digital Streaming Platforms များဆီသို့ ဖြန့်ချိပေးနေပါသည်။</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col links-col">
-                    <h3>အမြန်လင့်ခ်များ</h3>
-                    <ul>
-                        <li><a href="about.html">ကျွန်ုပ်တို့အကြောင်း</a></li>
-                        <li><a href="our-services.html">ဝန်ဆောင်မှုများ</a></li>
-                        <li><a href="artists.html">အနုပညာရှင်များ</a></li>
-                        <li><a href="blog.html">ဘလော့</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col contact-col">
-                    <h3>ဆက်သွယ်ရန်</h3>
-                    <p><i class="fas fa-phone-alt"></i> 09-400046827, 09-400046826</p>
-                    <p><i class="fas fa-envelope"></i> contact@bmg.com.mm</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Central Tower, ရန်ကုန်။</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© <span id="current-year"></span> BMG Myanmar. All Rights Reserved. <a href="#">Privacy Policy</a></p>
-            </div>
+    <section class="bmg-section">
+      <div class="bmg-container">
+        <div class="bmg-stats" data-reveal>
+          <div><div class="bmg-stat__value">150+</div><div class="bmg-stat__label">Stores &amp; platforms</div></div>
+          <div><div class="bmg-stat__value">24/7</div><div class="bmg-stat__label">Content ID monitoring</div></div>
+          <div><div class="bmg-stat__value">100%</div><div class="bmg-stat__label">You keep your rights</div></div>
+          <div><div class="bmg-stat__value">MMK + USD</div><div class="bmg-stat__label">Local &amp; global payouts</div></div>
         </div>
-    </footer>
-    
-    <button id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+      </div>
+    </section>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
-    <script>
-        AOS.init({ once: true, duration: 800, offset: 100 });
-        document.getElementById("current-year").textContent = new Date().getFullYear();
-        
-        const navToggle = document.getElementById('nav-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        
-        if(navToggle){
-            navToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-                navToggle.classList.toggle('active');
-            });
-        }
-    </script>
+    <section class="bmg-section bmg-section--alt">
+      <div class="bmg-container">
+        <h2>What we do</h2>
+        <p class="lead">Five core services, built around one goal: making sure your music earns.</p>
+        <div class="bmg-grid bmg-grid--3 u-mt-4">
+        <article class="bmg-card" data-reveal>
+          <div class="bmg-card__media" aria-hidden="true">&#9835;</div>
+          <div class="bmg-card__body">
+            <h3 class="bmg-card__title"><a href="services/music-distribution.html">Music Distribution</a></h3>
+            <p class="bmg-card__text">Deliver your music to Spotify, Apple Music, YouTube Music and 150+ stores worldwide.</p>
+            <a class="bmg-card__link" href="services/music-distribution.html">Learn more &rarr;</a>
+          </div>
+        </article>
+        <article class="bmg-card" data-reveal>
+          <div class="bmg-card__media" aria-hidden="true">&#9835;</div>
+          <div class="bmg-card__body">
+            <h3 class="bmg-card__title"><a href="services/youtube-monetization.html">YouTube Monetization</a></h3>
+            <p class="bmg-card__text">Turn views into revenue with official artist channels, Content ID and AdSense management.</p>
+            <a class="bmg-card__link" href="services/youtube-monetization.html">Learn more &rarr;</a>
+          </div>
+        </article>
+        <article class="bmg-card" data-reveal>
+          <div class="bmg-card__media" aria-hidden="true">&#9835;</div>
+          <div class="bmg-card__body">
+            <h3 class="bmg-card__title"><a href="services/content-id-protection.html">Content ID Protection</a></h3>
+            <p class="bmg-card__text">Detect and monetize unauthorized use of your music across YouTube.</p>
+            <a class="bmg-card__link" href="services/content-id-protection.html">Learn more &rarr;</a>
+          </div>
+        </article>
+        </div>
+        <p class="u-mt-4"><a class="bmg-btn bmg-btn--outline" href="services/">View all services</a></p>
+      </div>
+    </section>
+
+    <section class="bmg-section">
+      <div class="bmg-container">
+        <h2>Roster</h2>
+        <p class="lead">Meet the artists releasing with BMG.</p>
+        <div class="bmg-grid bmg-grid--3 u-mt-4">
+          <article class="bmg-card" data-reveal>
+            <div class="bmg-card__media" aria-hidden="true">&#9834;</div>
+            <div class="bmg-card__body">
+              <h3 class="bmg-card__title"><a href="artists/artist-profile.html">Project K</a></h3>
+              <p class="bmg-card__text">Hip-hop &middot; Yangon</p>
+              <a class="bmg-card__link" href="artists/artist-profile.html">View profile &rarr;</a>
+            </div>
+          </article>
+          <article class="bmg-card" data-reveal>
+            <div class="bmg-card__media" aria-hidden="true">&#9834;</div>
+            <div class="bmg-card__body">
+              <h3 class="bmg-card__title"><a href="artists/example-artist.html">Example Artist</a></h3>
+              <p class="bmg-card__text">Pop &middot; Mandalay</p>
+              <a class="bmg-card__link" href="artists/example-artist.html">View profile &rarr;</a>
+            </div>
+          </article>
+          <article class="bmg-card" data-reveal>
+            <div class="bmg-card__media" aria-hidden="true">&#9834;</div>
+            <div class="bmg-card__body">
+              <h3 class="bmg-card__title"><a href="artists/example-band.html">Example Band</a></h3>
+              <p class="bmg-card__text">Rock &middot; Yangon</p>
+              <a class="bmg-card__link" href="artists/example-band.html">View profile &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bmg-section bmg-section--alt">
+      <div class="bmg-container">
+        <h2>Latest from Resources</h2>
+        <div class="bmg-grid bmg-grid--3 u-mt-4">
+        <article class="bmg-card" data-reveal>
+          <div class="bmg-card__body">
+            <span class="bmg-badge">Spotify</span>
+            <h3 class="bmg-card__title"><a href="resources/spotify/how-to-get-spotify-verified.html">How to Get Your Spotify Artist Profile Verified</a></h3>
+            <a class="bmg-card__link" href="resources/spotify/how-to-get-spotify-verified.html">Read the guide &rarr;</a>
+          </div>
+        </article>
+        <article class="bmg-card" data-reveal>
+          <div class="bmg-card__body">
+            <span class="bmg-badge">YouTube</span>
+            <h3 class="bmg-card__title"><a href="resources/youtube/how-youtube-content-id-works.html">How YouTube Content ID Works</a></h3>
+            <a class="bmg-card__link" href="resources/youtube/how-youtube-content-id-works.html">Read the guide &rarr;</a>
+          </div>
+        </article>
+        <article class="bmg-card" data-reveal>
+          <div class="bmg-card__body">
+            <span class="bmg-badge">Copyright</span>
+            <h3 class="bmg-card__title"><a href="resources/copyright/music-copyright-guide-myanmar.html">A Music Copyright Guide for Myanmar Artists</a></h3>
+            <a class="bmg-card__link" href="resources/copyright/music-copyright-guide-myanmar.html">Read the guide &rarr;</a>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bmg-section">
+      <div class="bmg-container">
+        <div class="bmg-cta" data-reveal>
+          <div>
+            <h2>Ready to release your next single?</h2>
+            <p>Tell us about your project — we reply within 1–2 business days.</p>
+          </div>
+          <a class="bmg-btn bmg-btn--accent" href="contact/">Start Now</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="bmg-footer">
+    <div class="bmg-container">
+      <div class="bmg-grid bmg-grid--4">
+        <div>
+          <p class="bmg-footer__title">BMG Myanmar</p>
+          <p class="u-text-sm">Music distribution, YouTube monetization and rights
+            administration for artists in Myanmar and beyond.</p>
+        </div>
+        <div>
+          <p class="bmg-footer__title">Services</p>
+          <ul class="bmg-footer__list u-text-sm">
+            <li><a href="services/music-distribution.html">Music Distribution</a></li>
+            <li><a href="services/youtube-monetization.html">YouTube Monetization</a></li>
+            <li><a href="services/content-id-protection.html">Content ID Protection</a></li>
+            <li><a href="services/music-video-distribution.html">Music Video Distribution</a></li>
+            <li><a href="services/publishing-administration.html">Publishing Administration</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="bmg-footer__title">Company</p>
+          <ul class="bmg-footer__list u-text-sm">
+            <li><a href="artists/">Artists</a></li>
+            <li><a href="resources/">Resources</a></li>
+            <li><a href="about/">About</a></li>
+            <li><a href="about/partners.html">Partners</a></li>
+            <li><a href="about/careers.html">Careers</a></li>
+            <li><a href="contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="bmg-footer__title">Explore</p>
+          <ul class="bmg-footer__list u-text-sm">
+            <li><a href="sitemap.xml">Sitemap (XML)</a></li>
+            <li><a href="sitemap.html">Sitemap (HTML)</a></li>
+            <li><span class="bmg-badge bmg-badge--muted">Academy — soon</span></li>
+            <li><span class="bmg-badge bmg-badge--muted">Artist Portal — soon</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bmg-footer__bottom">
+        <span>&copy; <span data-year>2026</span> BMG Myanmar. All rights reserved.</span>
+        <span><a href="contact/">hello@bmg.com.mm</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/navigation.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
 </body>
 </html>

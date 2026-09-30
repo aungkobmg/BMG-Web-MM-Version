@@ -1,0 +1,11 @@
+# BMG Website V2
+User-agent: *
+Allow: /
+
+# Reserved areas (not launched yet)
+Disallow: /academy/
+Disallow: /mmdb/
+Disallow: /copyright-center/
+Disallow: /artist-portal/
+
+Sitemap: https://bmg.com.mm/sitemap.xml
