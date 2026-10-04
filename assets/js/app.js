@@ -2,20 +2,25 @@
    BMG Website V2 - app.js
    Global behaviors shared by every page:
      - Auto-update footer year.
-     - Smooth in-page anchor scrolling (respecting sticky header).
-     - Contact form validation stub (no backend yet).
-     - Reveal-on-scroll animation for [data-reveal] elements.
+     - Contact form: validates, then opens the visitor's email app
+       (mailto fallback). No backend exists, so it never claims the
+       message was sent.
+     - Reveal-on-scroll for [data-reveal] elements (styles in
+       components.css; content stays visible if JS is unavailable).
    Loaded with `defer` on every page, after navigation.js.
+   Every function is a no-op when its elements are absent.
    ============================================================ */
 (function () {
   "use strict";
 
-  function ready(fn) {
-    if (document.readyState !== "loading") fn();
-    else document.addEventListener("DOMContentLoaded", fn);
-  }
+  const CONTACT_EMAIL = "hello@bmg.com.mm";
 
-  ready(function () {
+  const ready = (fn) => {
+    if (document.readyState !== "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn, { once: true });
+  };
+
+  ready(() => {
     updateFooterYear();
     initContactForm();
     initRevealOnScroll();
@@ -23,75 +28,74 @@
 
   /* ---------- Footer year ---------- */
   function updateFooterYear() {
-    var nodes = document.querySelectorAll("[data-year]");
-    var year = String(new Date().getFullYear());
-    nodes.forEach(function (node) {
+    const year = String(new Date().getFullYear());
+    document.querySelectorAll("[data-year]").forEach((node) => {
       node.textContent = year;
     });
   }
 
-  /* ---------- Contact form (client-side validation only) ---------- */
+  /* ---------- Contact form (mailto fallback) ---------- */
   function initContactForm() {
-    var form = document.querySelector("[data-contact-form]");
+    const form = document.querySelector("[data-contact-form]");
     if (!form) return;
 
-    form.addEventListener("submit", function (event) {
+    const status = form.querySelector("[data-form-status]");
+    const setStatus = (message, tone) => {
+      if (!status) return;
+      status.textContent = message;
+      status.classList.toggle("u-text-muted", tone === "info");
+      status.classList.toggle("bmg-form__status--error", tone === "error");
+    };
+
+    form.addEventListener("submit", (event) => {
       event.preventDefault();
 
       if (!form.checkValidity()) {
-        // Let the browser surface its native validation messages.
+        setStatus("Please complete the required fields.", "error");
         form.reportValidity();
         return;
       }
 
-      var status = form.querySelector("[data-form-status]");
-      // TODO: POST to /contact/ handler or API endpoint once backend exists.
-      if (status) {
-        status.textContent =
-          "Thank you! Your message has been received. We will reply within 1–2 business days.";
-        status.classList.remove("u-text-muted");
-        status.classList.add("u-text-primary", "u-fw-bold");
-      }
-      form.reset();
+      const data = new FormData(form);
+      const subject = `Website enquiry: ${data.get("topic") || "General"}`;
+      const body = [
+        `Name: ${data.get("name")}`,
+        `Email: ${data.get("email")}`,
+        "",
+        data.get("message"),
+      ].join("\n");
+
+      setStatus(
+        `Online sending is not set up yet. Your email app should open with a draft addressed to ${CONTACT_EMAIL}; if it does not, please email us directly.`,
+        "info"
+      );
+      window.location.href =
+        `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
   }
 
   /* ---------- Reveal on scroll ---------- */
   function initRevealOnScroll() {
-    var items = document.querySelectorAll("[data-reveal]");
+    const items = document.querySelectorAll("[data-reveal]");
     if (!items.length) return;
 
-    var supportsIO = "IntersectionObserver" in window;
-    if (!supportsIO) {
-      items.forEach(function (el) {
-        el.classList.add("is-revealed");
-      });
-      return;
-    }
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion || !("IntersectionObserver" in window)) return; // stay visible
 
-    var style = document.createElement("style");
-    style.textContent =
-      "[data-reveal]{opacity:0;transform:translateY(14px);" +
-      "transition:opacity .5s ease,transform .5s ease}" +
-      "[data-reveal].is-revealed{opacity:1;transform:none}" +
-      "@media (prefers-reduced-motion:reduce){" +
-      "[data-reveal]{opacity:1;transform:none;transition:none}}";
-    document.head.appendChild(style);
+    // The hidden initial state only applies once JS has confirmed it can reveal.
+    document.documentElement.classList.add("reveal-ready");
 
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-revealed");
-            observer.unobserve(entry.target);
-          }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
         });
       },
       { threshold: 0.12 }
     );
 
-    items.forEach(function (el) {
-      observer.observe(el);
-    });
+    items.forEach((el) => observer.observe(el));
   }
 })();

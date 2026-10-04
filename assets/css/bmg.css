@@ -404,3 +404,10 @@ p {
     transition-duration: 0.001ms !important;
   }
 }
+
+/* ---------- Mobile nav: lock page scroll while the menu is open ---------- */
+@media (max-width: 991.98px) {
+  body.nav-open {
+    overflow: hidden;
+  }
+}
