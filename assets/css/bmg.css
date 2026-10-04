@@ -315,6 +315,37 @@ p {
   max-width: 42rem;
 }
 
+.bmg-hero > .bmg-container > .bmg-btn {
+  margin-top: var(--bmg-space-4);
+}
+
+.bmg-hero .bmg-btn:focus-visible {
+  outline: 3px solid var(--bmg-accent);
+  outline-offset: 3px;
+}
+
+.bmg-service-hero .lead {
+  max-width: 42rem;
+}
+
+@media (max-width: 575.98px) {
+  .bmg-hero {
+    padding-block: var(--bmg-space-5);
+  }
+
+  .bmg-hero h1,
+  .bmg-hero .h1 {
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    overflow-wrap: anywhere;
+  }
+
+  .bmg-hero .bmg-btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 /* ---------- Breadcrumb ---------- */
 .bmg-breadcrumb {
   display: flex;
