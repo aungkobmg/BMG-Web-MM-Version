@@ -388,3 +388,50 @@
   display: grid;
   gap: 0.3rem;
 }
+
+/* ---------- Plain list inside a TOC / info card ---------- */
+.bmg-toc__list {
+  color: var(--bmg-text);
+}
+
+/* ---------- Data table (artist discography) ---------- */
+.bmg-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bmg-table th {
+  text-align: left;
+  background: var(--bmg-light);
+}
+
+.bmg-table th,
+.bmg-table td {
+  padding: 0.75rem 1rem;
+}
+
+/* ---------- Form status message ---------- */
+.bmg-form__status--error {
+  color: #b02a37;
+  font-weight: 700;
+}
+
+/* ---------- Reveal on scroll ----------
+   Content is visible by default. app.js adds `reveal-ready` to <html>
+   only when it can reveal items, so nothing stays hidden without JS
+   or when the visitor prefers reduced motion. */
+.reveal-ready [data-reveal]:not(.is-revealed) {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.reveal-ready [data-reveal] {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready [data-reveal]:not(.is-revealed) {
+    opacity: 1;
+    transform: none;
+  }
+}

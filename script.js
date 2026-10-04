@@ -24,6 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburgerMenu.setAttribute('aria-expanded', active);
         };
 
+        // Escape နှိပ်လျှင် Menu ပိတ်ပြီး hamburger သို့ focus ပြန်ပို့ရန်
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                toggleMenu(false);
+                hamburgerMenu.focus();
+            }
+        });
+
         // Hamburger Icon ကို နှိပ်သည့်အခါ
         hamburgerMenu.addEventListener('click', () => toggleMenu());
 
@@ -106,21 +114,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 contactForm.appendChild(formMessage);
             }
 
-            formMessage.textContent = 'သင့်မက်ဆေ့ချ်ကို လက်ခံရရှိပါသည်။ မကြာမီ အကြောင်းပြန်ပါမည်။';
-            formMessage.style.color = '#28a745';
+            // Backend မရှိသေးသဖြင့် မက်ဆေ့ချ် ပို့ပြီးဟု မပြဘဲ အီးမေးလ် app ဖြင့် ဖွင့်ပေးမည်
+            formMessage.setAttribute('role', 'status');
+            formMessage.setAttribute('aria-live', 'polite');
             formMessage.style.marginTop = '15px';
-            formMessage.style.fontWeight = 'bold';
             formMessage.style.display = 'block';
 
-            contactForm.reset();
+            if (!contactForm.checkValidity()) {
+                formMessage.style.color = '#b02a37';
+                formMessage.textContent = 'လိုအပ်သော အချက်အလက်များကို ဖြည့်သွင်းပါ။';
+                contactForm.reportValidity();
+                return;
+            }
 
-            // 5 စက္ကန့်ကြာလျှင် message ကို ဖျောက်မည်
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
+            const data = new FormData(contactForm);
+            const body = [
+                `အမည်: ${data.get('name')}`,
+                `အီးမေးလ်: ${data.get('email')}`,
+                `ဖုန်း: ${data.get('phone') || '-'}`,
+                '',
+                data.get('message')
+            ].join('\n');
+
+            formMessage.style.color = 'inherit';
+            formMessage.textContent = 'အွန်လိုင်းမှ တိုက်ရိုက်ပေးပို့ခြင်း မရရှိသေးပါ။ သင့်အီးမေးလ် app တွင် contact@bmg.com.mm သို့ draft ဖွင့်ပေးပါမည်။ မဖွင့်ပါက အီးမေးလ်ဖြင့် တိုက်ရိုက်ဆက်သွယ်ပါ။';
+            window.location.href = `mailto:contact@bmg.com.mm?subject=${encodeURIComponent('Website enquiry')}&body=${encodeURIComponent(body)}`;
         });
     }
-    
+
     // ============== 8. FAQ Accordion | အမေးအဖြေ ကဏ္ဍအတွက် ==============
     const faqItems = document.querySelectorAll('.faq-item');
     if (faqItems.length > 0) {
